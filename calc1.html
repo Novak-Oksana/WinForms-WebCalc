@@ -1,0 +1,37 @@
+<html>
+<head>
+	<title>Simple Calc</title>
+	<script>
+		function calc(a, b, op) {
+			switch(op)
+			{
+				case '+':
+				    return parseInt(a) + parseInt(b);
+				case '-':
+				    return a - b;
+				case '*':
+				    return a * b;
+				case '/':
+				    return a / b;
+			}
+			return "Not Supported";
+		}
+
+     	function calculate() {
+
+			var a = document.getElementById("atxt").value;
+			var b = document.getElementById("btxt").value;
+			var op = document.getElementById("op").value;
+
+			document.getElementById("txtres").value = calc(a, b, op);
+		}
+	</script>
+</head>
+<body>
+	<b>a:</b><input type="text" id="atxt"/><p>
+	<b>b:</b><input type="text" id="btxt"/><p> 
+	<b>op:</b><input type="text" id="op"/> <p>
+	<b>res:</b><input type="text" id="txtres"/> <p>
+	<input type="button" id="btncalc" value="Calculate" onClick="calculate()"/> <p>
+</body>
+</html>
